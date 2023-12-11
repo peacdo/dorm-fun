@@ -1,3 +1,4 @@
+# sortArray
 Get the following inputs from user:
     1. Length of the array.
     2. Get the elements of the array.
