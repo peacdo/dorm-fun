@@ -8,3 +8,6 @@ Write a python script that checks if the given script is pangram or not.
     sertac, is not a pangram.
     Enter a sentence or word: Cwm fjord bank glyphs vext quiz
     Cwm fjord bank glyphs vext quiz, is a pangram.
+
+
+ > First try: 14.12.2023, rejected.
