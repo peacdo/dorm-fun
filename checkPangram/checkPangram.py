@@ -3,17 +3,19 @@
 x=input("Metin Girin :")
 x=x.upper()
 z=0
-y=("ABCDEFGHIJKLMNOPQRSTUVWXYZ")
-for m in range(26):
+m=0
+y=("ABCDEFGHIJKLMNOPQRSTUVWXYZ/")
+
+while len(y) > 1 :
+    n=0
     for n in range(len(x)):
         if x[n]==y[m]:
-            m=m+1
-            z=z+1
+            y=y.replace(y[m],"")
+            z=z+1        
             
-
 if z >= 26 :   
     print("This is a pangram")
 else : 
     print("This is not a pangram")
 
-    #AAAAAAAAAAAAAAAAAAAAAA
+
