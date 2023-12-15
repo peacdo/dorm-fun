@@ -7,6 +7,7 @@ y=("ABCDEFGHIJKLMNOPQRSTUVWXYZ")
 for m in range(26):
     for n in range(len(x)):
         if x[n]==y[m]:
+            m=m+1
             z=z+1
             
 
@@ -14,3 +15,5 @@ if z >= 26 :
     print("This is a pangram")
 else : 
     print("This is not a pangram")
+
+    #AAAAAAAAAAAAAAAAAAAAAA
