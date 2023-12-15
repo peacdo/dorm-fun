@@ -1,5 +1,4 @@
 # REJECTED, TRY AGAIN... 14.12.2023
-# Online Python-3 Compiler (Interpretex
 x=input("Metin Girin :")
 x=x.upper()
 z=0
@@ -11,6 +10,6 @@ for m in range(26):
             
 
 if z >= 26 :   
-    print("he")
+    print("This is a pangram")
 else : 
-    print("yok")
+    print("This is not a pangram")
