@@ -11,3 +11,4 @@ Write a python script that checks if the given script is pangram or not.
 
 
  > First try: 14.12.2023, rejected.
+ > Second try: 15.12.2023, rejected.
