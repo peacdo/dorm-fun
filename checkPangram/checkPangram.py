@@ -14,7 +14,7 @@ for a in range(26) :
         if x[n]==y[m]:
             y=y.replace(y[m],"")
             z=z+1
-            print(y)        
+                   
             
 if z >= 26 :   
     print("This is a pangram")
