@@ -1,6 +1,6 @@
 # Student Record System
 
-Write a python script that creates an **3D Array** to store and output data. 
+Write a python program that creates an **3D Array** to store and output data. 
 >There must be an menu, and options such as adding record, deleting record, displaying a single record, displaying all records.
 ---
 Sample output:
