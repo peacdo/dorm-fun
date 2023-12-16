@@ -8,12 +8,13 @@ z=0
 m=0
 y=("ABCDEFGHIJKLMNOPQRSTUVWXYZ/")
 
-while len(y) > 1 :
+for a in range(26) :
     n=0
     for n in range(len(x)):
         if x[n]==y[m]:
             y=y.replace(y[m],"")
-            z=z+1        
+            z=z+1
+            print(y)        
             
 if z >= 26 :   
     print("This is a pangram")
