@@ -24,7 +24,9 @@ def mainLoop():
                 return mainLoop()
             a,b,c,d=x.split(",")
             for i in range(1,len(l)):
-                if a in l[i] :
+                k=l[i].split(",")
+                j=k[0]
+                if a == j :
                     print("\nThis student allready recorded.") 
                     return mainLoop()
             addRecord(a,b,c,d)
@@ -40,15 +42,15 @@ def mainLoop():
             for i in range(1,len(l)):
                 k=l[i].split(",")
                 j=k[0]
-                print(j)
                 if x == j :
                     p=True
+                    l.remove(l[i])
+                    print(f"\nStudent who has the number '{x}' has been deleted from the system.")
+                    break
             if p==False:
                  print("\nThere is no student has that number in the system.\n(-del [student_number])")
-                 return mainLoop()
-            dell(x)
-            print(f"\nStudent who has the number '{x}' has been deleted from the system.")
             return mainLoop()
+            
         case "-delall":
             delall()
             return mainLoop()
@@ -59,16 +61,19 @@ def mainLoop():
             if len(x) < 1 :
                 print("\nThere is no student has that number in the system.\n(-show [student_number])")
                 return mainLoop()
+            
             for i in range(1,len(l)):
                 k=l[i].split(",")
                 j=k[0]
                 if x == j :
                     p=True
+                    print("\n",l[i])
+                    break
             if p==False:
                  print("\nThere is no student has that number in the system.\n(-show [student_number])")
-                 return mainLoop()
-            show(x)
             return mainLoop()
+            
+            
         case "-showall":    
             showall()
             return mainLoop()
@@ -88,10 +93,11 @@ def delall():
         l.remove(l[i])
     l.append("\nList of recorded students :\n")
     return l
-def show(x):
-    for i in range(len(l)):
-                if f"{x}" in l[i]:
-                    print("\t\n",l[i])
+#def show(x,j):
+    
+    
+    
+    
 def showall():
     print(l[0])
     for n in range(1,len(l)):
