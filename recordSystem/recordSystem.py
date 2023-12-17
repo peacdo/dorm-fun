@@ -1,3 +1,5 @@
+# rejected 17.12.2023
+
 snum=str();sname=str();ssname=str();syob=str();l=["\nList of recorded students :\n"] 
 def mainLoop():
     x=input("\nChoose an operation(type -h for help): ")
