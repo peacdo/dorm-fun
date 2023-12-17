@@ -49,8 +49,7 @@ def mainLoop():
                     break
             if p==False:
                  print("\nThere is no student has that number in the system.\n(-del [student_number])")
-            return mainLoop()
-            
+            return mainLoop()          
         case "-delall":
             delall()
             return mainLoop()
@@ -71,9 +70,7 @@ def mainLoop():
                     break
             if p==False:
                  print("\nThere is no student has that number in the system.\n(-show [student_number])")
-            return mainLoop()
-            
-            
+            return mainLoop()           
         case "-showall":    
             showall()
             return mainLoop()
@@ -92,12 +89,7 @@ def delall():
     for i in range(len(l)):    
         l.remove(l[i])
     l.append("\nList of recorded students :\n")
-    return l
-#def show(x,j):
-    
-    
-    
-    
+    return l    
 def showall():
     print(l[0])
     for n in range(1,len(l)):
