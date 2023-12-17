@@ -52,6 +52,7 @@ def mainLoop():
             return mainLoop()          
         case "-delall":
             delall()
+            print("\nAll records have been deleted.")
             return mainLoop()
         case "-show":
             p=False
@@ -86,8 +87,7 @@ def dell(x):
         if x in l[i]:
             l.remove(l[i])
 def delall():
-    for i in range(len(l)):    
-        l.remove(l[i])
+    l=[]
     l.append("\nList of recorded students :\n")
     return l    
 def showall():
