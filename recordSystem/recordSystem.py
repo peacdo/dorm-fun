@@ -32,7 +32,7 @@ def mainLoop():
             return mainLoop()
         case "-del":
             p=False
-            x=x.replace("-del ","")
+            x=x.replace("-del","")
             if len(x) < 1 :
                 print("\nThere is no student has that number in the system.\n(-del [student_number])")
                 return mainLoop()
@@ -40,6 +40,7 @@ def mainLoop():
             for i in range(1,len(l)):
                 k=l[i].split(",")
                 j=k[0]
+                print(j)
                 if x == j :
                     p=True
             if p==False:
