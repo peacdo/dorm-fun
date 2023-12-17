@@ -51,11 +51,14 @@ def mainLoop():
         case "-show":
             p=False
             x=x.replace("-show","")
+
             if len(x) < 1 :
                 print("\nThere is no student has that number in the system.\n(-show [student_number])")
                 return mainLoop()
             for i in range(1,len(l)):
-                if x in l[i]:
+                k=l[i].split(",")
+                j=k[0]
+                if x == j :
                     p=True
             if p==False:
                  print("\nThere is no student has that number in the system.\n(-show [student_number])")
