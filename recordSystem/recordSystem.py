@@ -38,7 +38,9 @@ def mainLoop():
                 return mainLoop()
             
             for i in range(1,len(l)):
-                if x in l[i]:
+                k=l[i].split(",")
+                j=k[0]
+                if x == j :
                     p=True
             if p==False:
                  print("\nThere is no student has that number in the system.\n(-del [student_number])")
