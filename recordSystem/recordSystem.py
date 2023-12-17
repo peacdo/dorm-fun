@@ -15,22 +15,49 @@ def mainLoop():
             """)
             return mainLoop()
         case "-add":
-            x=x.replace("-add","")    
+            x=x.replace("-add","")
+            if len(x)<8 :
+                print("\nYou may want to write the number, name, surname, and year of birth of student that you want to add to system.\n (-add [student_number], [student_name], [student_surname], [student_year_of_birth])")    
+                return mainLoop()
             a,b,c,d=x.split(",")
             for i in range(1,len(l)):
                 if a in l[i] :
                     print("\nThis student allready recorded.") 
                     return mainLoop()
             addRecord(a,b,c,d)
+            print("\nStudent has been recorded to system.")
             return mainLoop()
         case "-del":
+            p=False
+            x=x.replace("-del ","")
+            if len(x) < 1 :
+                print("\nThere is no student has that number in the system.\n(-del [student_number])")
+                return mainLoop()
+            
+            for i in range(1,len(l)):
+                if x in l[i]:
+                    p=True
+            if p==False:
+                 print("\nThere is no student has that number in the system.\n(-del [student_number])")
+                 return mainLoop()
             dell(x)
+            print(f"\nStudent who has the number '{x}' has been deleted from the system.")
             return mainLoop()
         case "-delall":
             delall()
             return mainLoop()
         case "-show":
+            p=False
             x=x.replace("-show","")
+            if len(x) < 1 :
+                print("\nThere is no student has that number in the system.\n(-show [student_number])")
+                return mainLoop()
+            for i in range(1,len(l)):
+                if x in l[i]:
+                    p=True
+            if p==False:
+                 print("\nThere is no student has that number in the system.\n(-show [student_number])")
+                 return mainLoop()
             show(x)
             return mainLoop()
         case "-showall":    
@@ -40,9 +67,10 @@ def mainLoop():
             showall()
             return print("\t\nHave a nice day...")
         case _ :
+            print("\nInvalid operation.You may want to check help.")
             return mainLoop()       
 def dell(x):
-    x=x.replace("-del","")
+    
     for i in range(1,len(l)):
         if x in l[i]:
             l.remove(l[i])
@@ -66,3 +94,4 @@ mainLoop()
 #1: odtu231224, Sertaç ,Kandemir, 2006
 #2: hacettepe38, Semih Buğra, Kartın, 2005
 #3: gazipedo109, Yasin, Gülhan, 2010 
+#-add 1,2,3,4
