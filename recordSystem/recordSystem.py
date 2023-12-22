@@ -28,7 +28,6 @@ def mainLoop():
             b=cleaner(b)
             c=cleaner(c)
             d=cleaner(d)           
-            
             if a.isnumeric() == False  :
                 print("\nStudent number must contain only numbers.")
                 return mainLoop()
