@@ -24,6 +24,17 @@ def mainLoop():
                 print("\nYou may want to write the number, name, surname, and year of birth of student that you want to add to system.\n (-add [student_number], [student_name], [student_surname], [student_year_of_birth])")    
                 return mainLoop()
             a,b,c,d=x.split(",")
+            a=cleaner(a)
+            b=cleaner(b)
+            c=cleaner(c)
+            d=cleaner(d)           
+            
+            if a.isnumeric() == False  :
+                print("\nStudent number must contain only numbers.")
+                return mainLoop()
+            if d.isnumeric() == False  :
+                print("\nYear of the birth of student must contain only numbers.")
+                return mainLoop()
             for i in range(1,len(l)):
                 k=l[i].split(",")
                 j=k[0]
@@ -81,7 +92,11 @@ def mainLoop():
             return print("\t\nHave a nice day...")
         case _ :
             print("\nInvalid operation.You may want to check help.")
-            return mainLoop()       
+            return mainLoop()  
+
+def cleaner(x):
+    x=x.replace(" ","")     
+    return x
 def dell(x):
     
     for i in range(1,len(l)):
