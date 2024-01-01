@@ -1,3 +1,4 @@
+#rejected.. 01.01.24 - Player must not be able to place his mark in a already occupied space.
 x="""
      |     |     
      |     |     
