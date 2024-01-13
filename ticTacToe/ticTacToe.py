@@ -1,5 +1,5 @@
 #rejected.. 01.01.24 - Player must not be able to place his mark in a already occupied space.
-
+# no input validation, code is not optimized too long can be shorten to almost half.
 markedspaces=[]
 player1=input("Player1(X): ")
 player2=input("Player2(O): ")
