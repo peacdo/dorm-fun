@@ -1,3 +1,4 @@
+#
 stairs=int(input("How many stairs do you want to climb: "))
 single=stairs
 double=0
